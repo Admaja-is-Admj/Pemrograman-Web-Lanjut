@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CoursesService } from './courses.service';
 
 @Component({
   selector: 'app-courses',
@@ -18,8 +19,10 @@ export class CoursesComponent implements OnInit {
     {id: 3, name:'C#'},
     {id: 4, name: 'VB.NET'}
   ]
-
-  constructor() { }
+  Courses;
+  constructor(private service:CoursesService) { 
+    this.Courses=service.getCouses();
+  }
 
   ngOnInit() {
   }

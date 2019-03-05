@@ -10,6 +10,7 @@ export class CoursesComponent implements OnInit {
   title = 'Belajar Angular';
   binding = 'property-binding';
   imageUrl = 'http://lorempixel.com/400/200';
+  Courses;
   colSpan = 2;
   isActive = false;
   nama = 'Roberto';
@@ -23,11 +24,11 @@ export class CoursesComponent implements OnInit {
   onKeyUp(){
     console.log("enter was pressed");
   }
-  // title = 'Angular';
-  // point = '3 Author';
-  Courses;
+  title = 'Angular';
+  point = '3 Author';
+ 
   constructor(private service:CoursesService) {
-    // this.Courses = service.getCourses(); 
+    this.Courses = service.getCourses(); 
     // this.Courses = service.getCourses();
   }
   ngOnInit() {

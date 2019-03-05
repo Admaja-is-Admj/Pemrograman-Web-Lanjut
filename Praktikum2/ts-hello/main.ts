@@ -15,7 +15,15 @@
 // let count = 5;
 // count = 'a';
 
-let pesan;
-pesan = 'abc' ;
-let percobaan = (<string>pesan).endsWith('c');
-let alternative = (pesan as string).endsWith('c');
+// let pesan;
+// pesan = 'abc' ;
+// let percobaan = (<string>pesan).endsWith('c');
+// let alternative = (pesan as string).endsWith('c');
+let log = function pesan(){
+    console.log(pesan);
+}
+
+let doLog=(pesan)=>{
+    console.log(pesan);
+}
+let doLog1=(pesan)=>console.log(pesan);

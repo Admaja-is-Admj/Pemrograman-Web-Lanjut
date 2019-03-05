@@ -12,7 +12,14 @@
 // doSomething();
 // let count = 5;
 // count = 'a';
-var pesan;
-pesan = 'abc';
-var percobaan = pesan.endsWith('c');
-var alternative = pesan.endsWith('c');
+// let pesan;
+// pesan = 'abc' ;
+// let percobaan = (<string>pesan).endsWith('c');
+// let alternative = (pesan as string).endsWith('c');
+var log = function pesan() {
+    console.log(pesan);
+};
+var doLog = function (pesan) {
+    console.log(pesan);
+};
+var doLog1 = function (pesan) { return console.log(pesan); };

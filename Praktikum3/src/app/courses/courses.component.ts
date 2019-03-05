@@ -11,12 +11,12 @@ export class CoursesComponent implements OnInit {
   getTitle(){
     return this.title;
   }
-  Course = [
+  Courses = [
     {id: 0, name:'HTML'},
     {id: 1, name:'PHP'},
     {id: 2, name:'ANGULAR'},
     {id: 3, name:'C#'},
-    {id: 4, name: 'VB.NET'},
+    {id: 4, name: 'VB.NET'}
   ]
 
   constructor() { }

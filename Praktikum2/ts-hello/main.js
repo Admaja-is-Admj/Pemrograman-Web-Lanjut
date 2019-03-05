@@ -10,5 +10,9 @@
 //     console.log('Finally: '+ i);
 // }
 // doSomething();
-var count = 5;
-count = 'a';
+// let count = 5;
+// count = 'a';
+var pesan;
+pesan = 'abc';
+var percobaan = pesan.endsWith('c');
+var alternative = pesan.endsWith('c');

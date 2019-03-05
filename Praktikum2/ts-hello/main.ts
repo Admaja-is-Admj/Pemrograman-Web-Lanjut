@@ -12,5 +12,10 @@
 //     console.log('Finally: '+ i);
 // }
 // doSomething();
-let count = 5;
-count = 'a';
+// let count = 5;
+// count = 'a';
+
+let pesan;
+pesan = 'abc' ;
+let percobaan = (<string>pesan).endsWith('c');
+let alternative = (pesan as string).endsWith('c');

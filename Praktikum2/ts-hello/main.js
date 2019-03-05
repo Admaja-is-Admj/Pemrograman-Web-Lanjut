@@ -1,7 +1,7 @@
-// function log (message){
-//     console.log(message);
-// }
-// let message = 'Hello World';
+function log(message) {
+    console.log(message);
+}
+var message = 'Hello World';
 // log(message);
 // function doSomething(){
 //     for (let i = 0; i < 5; i++) {
@@ -16,10 +16,10 @@
 // pesan = 'abc' ;
 // let percobaan = (<string>pesan).endsWith('c');
 // let alternative = (pesan as string).endsWith('c');
-var log = function pesan() {
-    console.log(pesan);
-};
-var doLog = function (pesan) {
-    console.log(pesan);
-};
-var doLog1 = function (pesan) { return console.log(pesan); };
+// let log = function pesan(){
+//     console.log(pesan);
+// }
+// let doLog=(pesan)=>{
+//     console.log(pesan);
+// }
+// let doLog1=(pesan)=>console.log(pesan);

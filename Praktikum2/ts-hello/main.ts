@@ -1,8 +1,8 @@
-// function log (message){
-//     console.log(message);
-// }
+function log (message){
+    console.log(message);
+}
 
-// let message = 'Hello World';
+let message = 'Hello World';
 
 // log(message);
 // function doSomething(){
@@ -19,11 +19,11 @@
 // pesan = 'abc' ;
 // let percobaan = (<string>pesan).endsWith('c');
 // let alternative = (pesan as string).endsWith('c');
-let log = function pesan(){
-    console.log(pesan);
-}
+// let log = function pesan(){
+//     console.log(pesan);
+// }
 
-let doLog=(pesan)=>{
-    console.log(pesan);
-}
-let doLog1=(pesan)=>console.log(pesan);
+// let doLog=(pesan)=>{
+//     console.log(pesan);
+// }
+// let doLog1=(pesan)=>console.log(pesan);

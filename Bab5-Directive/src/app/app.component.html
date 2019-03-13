@@ -64,4 +64,20 @@ class="button" [class.active]="viewMode == 'list'">List view</button>
   <div *ngSwitchCase="'list'">List View Content</div>
   <div *ngSwitchDefault>Other</div>
 </div>
+<button (click)="onAdd()">Add</button>
+<ul>
+  <!-- <li *ngFor="let item of coursesFor; index as i"> 
+    {{i}}-{{item.name}}
+  </li> -->
+  <li *ngFor="let item of coursesFor; even as isEven"> 
+    {{item.name}}
+    <span *ngIf="isEven">(Even)</span>
+    <button (click)="onRemove(item)">Remove</button>
+    <button (click)="onChange(item)">Update</button>
+  </li>
+</ul>
+<button (click)="loadCourses()">Show data</button>
+<li *ngFor="let itemone of coursesForOne">
+  {{itemone.nama}}
+</li>
 <router-outlet></router-outlet>

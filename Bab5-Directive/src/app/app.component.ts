@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Bab5-Directive';
+  title = 'Beajar Angular';
+  courses = [1, 2];
+  // courses=[];
 }

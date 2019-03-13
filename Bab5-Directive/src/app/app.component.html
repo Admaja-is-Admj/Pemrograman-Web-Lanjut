@@ -55,6 +55,10 @@
     >
   </li>
 </ul>
+<button type="submit" (click)="viewMode = 'map'"
+class="button" [class.active]="viewMode == 'map'">Map view</button>
+<button type="submit" (click)="viewMode = 'list'"
+class="button" [class.active]="viewMode == 'list'">List view</button>
 <div [ngSwitch]="viewMode">
   <div *ngSwitchCase="'map'">Map View Content</div>
   <div *ngSwitchCase="'list'">List View Content</div>

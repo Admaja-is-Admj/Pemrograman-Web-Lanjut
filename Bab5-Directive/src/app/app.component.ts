@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Beajar Angular';
+  title = 'Belajar Angular';
   courses = [1, 2];
   // courses=[];
+  viewMode = 'map';
 }

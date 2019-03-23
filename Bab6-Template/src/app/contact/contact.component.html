@@ -1,40 +1,41 @@
 <div class="container">
   <div class="col-md-6">
-      <div ngModelGroup ="contact">
-          <div *ngIf="!contact.valid">Contoh validasi pada ngModelGroup</div>
-          <div class="form-group">
-              <label for="nama">Nama:</label>
-              <input 
-              type="text" 
-              id="nama"
-              ngModel
-              required
-              minlength="3"
-              maxlength="10"
-              pattern="pisang"
-              #firstName = "ngModel" 
-              class="form-control" 
-              (change)="log(firstName)" 
-              name="nama"/>
-              <div class="alert alert-danger" 
-              *ngIf="firstName.touched && !firstName.valid">
-                <div *ngIf="firstName.errors['required']" >Nama harus diisi</div>
-                <div *ngIf="firstName.errors['minlength']">nama min 3 kata</div>
-                <div *ngIf="firstName.errors['pattern']">
-                  nama tidak sesuai pattern
-                </div>
+   <div ngModelGroup = "contact" #contac="ngModelGroup" >
+      <div class="form-group">
+          <label for="nama">Nama:</label>
+          <input 
+          type="text" 
+          id="nama"
+          ngModel
+          required
+          minlength="3"
+          maxlength="10"
+          pattern="pisang"
+          #firstName = "ngModel" 
+          class="form-control" 
+          (change)="log(firstName)" 
+          name="nama"/>
+          <div class="alert alert-danger" 
+          *ngIf="firstName.touched && !firstName.valid">
+            <div *ngIf="firstName.errors['required']" >Nama harus diisi</div>
+            <div *ngIf="firstName.errors['minlength']">nama min 3 kata</div>
+            <div *ngIf="firstName.errors['pattern']">
+              nama tidak sesuai pattern
             </div>
-            </div>
-            <div class="form-group">
-                <label for="comment">Comment:</label>
-                <textarea 
-                class="form-control" 
-                id="comment" 
-                rows="5" 
-                ngModel 
-                name="comment"></textarea>
-            </div>
-            <button type="submit" [disabled]="!form.valid" class="btn btn-primary"> button</button>
-      </div>        
+        </div>
+      </div>
+   </div>
+    <div class="form-group">
+      <label for="comment">Comment:</label>
+      <textarea 
+        class="form-control" 
+        id="comment" 
+        rows="5" 
+        ngModel 
+        name="comment"></textarea>
+    </div>
+    <button type="submit" [disabled]="!form.valid" class="btn btn-primary"> 
+      button
+    </button>
   </div>
 </div>

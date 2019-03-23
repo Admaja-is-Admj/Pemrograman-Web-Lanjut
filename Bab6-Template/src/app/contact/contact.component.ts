@@ -12,12 +12,14 @@ import { Component, OnInit, Input } from '@angular/core';
 
 //   ngOnInit() {
 //   }
-  export class ContactComponent {
-    log(z) {
-      console.log(z);
-    }
-    submit(form) {
-      console.log(form);
-      form.valid;
-    }
+export class ContactComponent {
+  log(z) {
+    console.log(z);
   }
+
+  submit(form) {
+    console.log(form);
+    form.valid;
+  }
+}
+

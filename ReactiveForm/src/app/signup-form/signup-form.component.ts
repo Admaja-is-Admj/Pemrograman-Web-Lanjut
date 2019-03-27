@@ -14,9 +14,15 @@ export class SignupFormComponent implements OnInit {
       Validators.required,
       Validators.minLength(5),
       UsernameValidators.cannotContainerSpace
-    ]),
+    ],
+    UsernameValidators.shouldBeUnique),
     password: new FormControl('',Validators.required)
   });
+  login() {
+    this.form.setErrors({
+      invalidLogin: true
+    });
+  }
 
   get username() {
     return this.form.get('username');

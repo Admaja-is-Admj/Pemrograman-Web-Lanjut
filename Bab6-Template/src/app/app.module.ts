@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { TemplateDrivenComponent } from './template-driven/template-driven.component';
-import { from } from 'rxjs';
 
 @NgModule({
   declarations: [

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Http } from  '@angular/http';
 
 @Component({
@@ -7,11 +7,24 @@ import { Http } from  '@angular/http';
   styleUrls: ['./posts.component.css']
 })
 export class PostsComponent {
-  
-  constructor(http:Http) {
-     http.get('http://jsonplaceholder.typicode.com/posts').
-     subscribe(respone => {
-       console.log(respone);
+  posts: any[];
+  private url = 'http://jsonplaceholder.typicode.com/posts';
+
+  constructor(private http: Http) {
+     http.get(this.url)
+     .subscribe(respone => {
+       this.posts = respone.json();
      });
+  }
+
+  createPost(input: HTMLInputElement){
+    let post = {title: input.value};
+    input.value = '';
+    
+    this.http.post(this.url, JSON.stringify(post))
+    .subscribe(respone => {
+      post['id'] = respone.json().id;
+      this.posts.splice(0, 0, post);
+    })
   }
 }

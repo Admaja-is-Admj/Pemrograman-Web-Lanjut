@@ -12,8 +12,8 @@ export class PostsComponent {
 
   constructor(private http: Http) {
      http.get(this.url)
-     .subscribe(respone => {
-       this.posts = respone.json();
+     .subscribe(response => {
+       this.posts = response.json();
      });
   }
 
@@ -22,16 +22,23 @@ export class PostsComponent {
     input.value = '';
     
     this.http.post(this.url, JSON.stringify(post))
-    .subscribe(respone => {
-      post['id'] = respone.json().id;
+    .subscribe(response => {
+      post['id'] = response.json().id;
       this.posts.splice(0, 0, post);
     });
+  }
+  updatePost(post){
+    this.http.patch(this.url + '/' + post.id, JSON.stringify({ isRead: true}))
+    .subscribe(response => {
+      console.log(response.json());
+    })
+  }
 
-    updatePost(post) {
-      this.http.patch(this.url + '/' + post.id, JSON.stringify({ isRead: true}))
-      .subscribe(respone => {
-        console.log(respone.json());
-      })
-    }
+  deletePost(post){
+    this.http.delete(this.url + '/' + post.id)
+    .subscribe(response => {
+      let index = this.posts.indexOf(post);
+      this.posts.splice(index,1);
+    })
   }
 }

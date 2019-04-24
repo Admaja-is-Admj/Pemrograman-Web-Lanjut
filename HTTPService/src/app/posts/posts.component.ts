@@ -25,6 +25,13 @@ export class PostsComponent {
     .subscribe(respone => {
       post['id'] = respone.json().id;
       this.posts.splice(0, 0, post);
-    })
+    });
+
+    updatePost(post) {
+      this.http.patch(this.url + '/' + post.id, JSON.stringify({ isRead: true}))
+      .subscribe(respone => {
+        console.log(respone.json());
+      })
+    }
   }
 }

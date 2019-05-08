@@ -13,6 +13,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { ProfileComponent } from './profile/profile.component';
+import { AuthComponent } from './auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ProfileComponent } from './profile/profile.component';
     NavbarComponent,
     NotFoundComponent,
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,

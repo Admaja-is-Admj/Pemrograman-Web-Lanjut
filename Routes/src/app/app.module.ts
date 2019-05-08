@@ -11,6 +11,8 @@ import { FormMemberComponent } from './form-member/form-member.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
+import { RouterModule } from '@angular/router';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -20,14 +22,21 @@ import { HomeComponent } from './home/home.component';
     FormMemberComponent,
     NavbarComponent,
     NotFoundComponent,
-    HomeComponent
+    HomeComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot([
+      {path:'', component:HomeComponent},
+      {path:'form', component:FormMemberComponent},
+      {path:'post', component:PostsComponent},
+      {path:'profile/id', component:ProfileComponent},
+      {path:'**', component:NotFoundComponent}])
   ],
   providers: [],
   bootstrap: [AppComponent]

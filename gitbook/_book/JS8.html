@@ -1,0 +1,574 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>8_Reactive_form · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="JS9.html" />
+    
+    
+    <link rel="prev" href="JS6.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="JS2.html">
+            
+                <a href="JS2.html">
+            
+                    
+                    Jobsheet2
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="JS3.html">
+            
+                <a href="JS3.html">
+            
+                    
+                    Jobsheet3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="JS4.html">
+            
+                <a href="JS4.html">
+            
+                    
+                    Jobsheet4
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="bab5.html">
+            
+                <a href="bab5.html">
+            
+                    
+                    Bab5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="JS6.html">
+            
+                <a href="JS6.html">
+            
+                    
+                    Jobsheet6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="JS8.html">
+            
+                <a href="JS8.html">
+            
+                    
+                    8_Reactive_form
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="JS9.html">
+            
+                <a href="JS9.html">
+            
+                    
+                    9.HTTPService
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >8_Reactive_form</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><strong>Praktikum &#x2013; Bagian 1: Building a Bootstrap Form</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Langkah</strong></th>
+<th><strong>Keterangan</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Buat component baru dengan nama signup-form dengan perintah <strong>ng g c signup-form</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Modifikasi file signup-form.component.html menjadi seperti berikut:</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Jalankan dan Catat hasilnya (soal 1)</td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/f4547f314acb05de06c8d747b42b562c.png" alt=""></p>
+<p><img src="media/5e25686e528d3c962e0ee037b85e75bb.png" alt=""></p>
+<p><img src="media/4f44138ad2f5583b17465ba78c175dbf.png" alt=""></p>
+<p><strong>Praktikum &#x2013; Bagian 2: Control Programmatically</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Langkah</strong></th>
+<th><strong>Keterangan</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Modifikasi file signup-form.component.ts seperti dibawah ini:</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Modifikasi signup-form.component.html menjadi seperti berikut:</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Jalankan dan Catat hasil inspect elemen pada bagian console (soal 2), Akan muncul eror seperti berikut:</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Modifikasi file app.module.ts tambahkan kode berikut:</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Jalankan dan Catat hasilnya di bagian console pada browser (soal 3)</td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/af963f01001b868690f3c018fdb59e17.png" alt=""></p>
+<p><img src="media/0b8cc0cad56b9b500bfd70f6cd197699.png" alt=""></p>
+<p><img src="media/b43b33fbd73efea89291ed0cd160988e.png" alt=""></p>
+<p><img src="media/501d4e46b2b8f7fba1930679cd5b00f3.png" alt=""></p>
+<p><img src="media/0e6a28ce035a8e7708d376e4ebf7df21.png" alt=""></p>
+<p><img src="media/2bc34ae8e9124da4d6c7bf05f71ef44d.png" alt=""></p>
+<p><strong>Praktikum - Bagian 3: Adding Validation</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Langkah</strong></th>
+<th><strong>Keterangan</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Modifikasi signup-form.component.ts menjadi seperti berikut:</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Modifikasi signup-form.component.html menjadi seperti berikut:</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Jalankan, apakah validasi formnya berfungsi dan Catat hasilnya (soal 4)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Tambahkan get username pada file signup-form.component.ts seperti berikut:</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Modifikasi file signup-form.component.html menjadi seperti berikut:</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Jalankan dan Catat hasilnya (soal 5)</td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/c910b5e05ca52c826ccb858226ff0bf0.png" alt=""></p>
+<p><img src="media/b04394d3a5dd7a0b5c67ab28efd1f2b5.png" alt=""></p>
+<p><img src="media/20a1c248a300ad50863400663c9dac13.png" alt=""></p>
+<p><img src="media/0a8f84d2596a7d457e3b078650ee1dd6.png" alt=""></p>
+<p><img src="media/dde007fcf0d3c4108932965ea0cd2264.png" alt=""></p>
+<p><img src="media/20a1c248a300ad50863400663c9dac13.png" alt=""></p>
+<p><img src="media/9da9d392023ccdaf6cce96f8eca75416.png" alt=""></p>
+<p><strong>Praktikum - Bagian 4: Specific Validation Errors</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Langkah</strong></th>
+<th><strong>Keterangan</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Modifikasi signup-form.component.ts menjadi seperti berikut:</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Modifikasi signup-form.component.html menjadi seperti berikut:</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Jalankan dan Catat hasilnya (soal 6)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Modifikasi signup-form.component.html menjadi seperti berikut:</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Jalankan dan Catat hasilnya (soal 7)</td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/c18af9ee242071ed234b85160376df21.png" alt=""></p>
+<p><img src="media/e33b9e186d1b2d3b4c6b0ec6db351eae.png" alt=""></p>
+<p><img src="media/b0368f940b7d6478da24798cca56a288.png" alt=""></p>
+<p><img src="media/3edd802a45d3bdb27a392940141d91d7.png" alt=""></p>
+<p><img src="media/28de034b3043b3b2bd4b12f54baa2d9d.png" alt=""></p>
+<p><strong>Praktikum - Bagian 5: Custome Validation</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Langkah</strong></th>
+<th><strong>Keterangan</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Buat file baru pada folder signup-form dengan nama <strong>username.validators.ts</strong> dan isi dengan script sebagai berikut:</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Modifikasi signup-form.component.ts menjadi seperti berikut:</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Modifikasi signup-form.component.html menjadi seperti berikut:</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Jalankan dan Catat hasilnya (soal 8)</td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/a056a61bf60f7bc9ec6917afd6683e8b.png" alt=""></p>
+<p><img src="media/322d93d3fb769e3b6b1213339491d144.png" alt=""></p>
+<p><img src="media/0793c2eb27bd11f5a63e5a00358d37ce.png" alt=""></p>
+<p><img src="media/3c19ba21e7003bb0952e154ae1960c90.png" alt=""></p>
+<p><strong>Praktikum - Bagian 6: Asyncronus Validation</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Langkah</strong></th>
+<th><strong>Keterangan</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Modifikas file username.validators.ts seperti berikut:</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Modifikasi signup-form.component.ts menjadi seperti berikut:</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Modifikasi signup-form.component.html, tambahkan \<div\> seperti berikut:</div\></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Jalankan dan Catat hasilnya (soal 9)</td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/36796f62d0566f356ed25ec7fbc51383.png" alt=""></p>
+<p><img src="media/1e790723e41d13935c63e877be594665.png" alt=""></p>
+<p><img src="media/ea101ed4854b4b43130d615fd32f92e1.png" alt=""></p>
+<p><img src="media/27c514af50a7e00b87ef096bf8fdc312.png" alt=""></p>
+<p><strong>Praktikum - Bagian 7: Displaying a Loader Image</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Langkah</strong></th>
+<th><strong>Keterangan</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Modifikasi signup-form.component.html, tambahkan \<div\> seperti berikut:</div\></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Jalankan dan Catat hasilnya (soal 10)</td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/0d22578155c6eb3671e2472e5f676090.png" alt=""></p>
+<p><img src="media/7d8e9b535f4aa70d7a20e5de60e5e92b.png" alt=""></p>
+<p><strong>Praktikum - Bagian 8: Validating Form on Submit</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Langkah</strong></th>
+<th><strong>Keterangan</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Modifikasi signup-form.component.ts, dengan menambahkan method login() seperti berikut:</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Modifikasi signup-form.component.html seperti berikut:</td>
+</tr>
+<tr>
+<td></td>
+<td>Jalankan dan Catat hasilnya (soal 11)</td>
+</tr>
+</tbody>
+</table>
+<p><img src="media/e0626992f487083470e0c99488daf4e4.png" alt=""></p>
+<p><img src="media/ee102f576b42110e9eb2bc8e6deb3296.png" alt=""></p>
+<p><img src="media/a60991cdc556b002cb13078c8bb2cead.png" alt=""></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="JS6.html" class="navigation navigation-prev " aria-label="Previous page: Jobsheet6">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="JS9.html" class="navigation navigation-next " aria-label="Next page: 9.HTTPService">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"8_Reactive_form","level":"1.7","depth":1,"next":{"title":"9.HTTPService","level":"1.8","depth":1,"path":"JS9.md","ref":"JS9.md","articles":[]},"previous":{"title":"Jobsheet6","level":"1.6","depth":1,"path":"JS6.md","ref":"JS6.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"JS8.md","mtime":"2019-03-27T15:57:17.505Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-08T04:41:37.376Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

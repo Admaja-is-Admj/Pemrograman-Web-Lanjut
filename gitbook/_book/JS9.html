@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Jobsheet3 · GitBook</title>
+        <title>9.HTTPService · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="JS4.html" />
     
-    
-    <link rel="prev" href="JS2.html" />
+    <link rel="prev" href="JS8.html" />
     
 
     </head>
@@ -115,7 +113,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="JS3.html">
+        <li class="chapter " data-level="1.3" data-path="JS3.html">
             
                 <a href="JS3.html">
             
@@ -180,7 +178,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="JS9.html">
+        <li class="chapter active" data-level="1.8" data-path="JS9.html">
             
                 <a href="JS9.html">
             
@@ -223,7 +221,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Jobsheet3</a>
+        <a href="." >9.HTTPService</a>
     </h1>
 </div>
 
@@ -238,111 +236,82 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="jobsheet-3">Jobsheet 3</h1>
-<p><strong>Praktikum- Bagian 1: Component Basic</strong></p>
+                                <p><strong>Praktikum &#x2013; Bagian 2: Getting Data</strong></p>
 <ol>
-<li><p>Melakukan modifikasi pada app.component.html</p>
-<pre><code>&lt;app-courses&gt;&lt;/app-courses&gt;
-&lt;router-outlet&gt;&lt;/router-outlet&gt;
-</code></pre></li>
-<li><p>Kemudian membukan terminal dan melakukan compile dengan perintah ng serve,
-dan berikut hasilnya:</p>
+<li>Membuat komponen baru dengan nama posts</li>
+</ol>
+<p><img src="media/93912a5ae789f37d538a1194db689958.png" alt=""></p>
+<ol>
+<li>Import module HTTPServis</li>
+</ol>
+<p><img src="media/70c9a5ee73fe26fdb9c0edd8ae82d1d7.png" alt=""></p>
+<ol>
+<li>Memodifikasi post.component.ts</li>
+</ol>
+<p><img src="media/25b6d75b20e575789ad8767a640849da.png" alt=""></p>
+<ol>
+<li>Memodifikasi app.component.html</li>
+</ol>
+<p><img src="media/f0615dd98b2cd4edc41e4cd61af6c81b.png" alt=""></p>
+<ol>
+<li><p>Hasil dari kode diatas</p>
+<p><img src="media/c27f54d69b7fbcd5b4e5dbc82aefe148.png" alt=""></p>
+</li>
+<li><p>Melakukan comment pada httpModule</p>
+<p><img src="media/7aa0cb7329d5196a7053a6aac49f8a4b.png" alt=""></p>
+</li>
+<li><p>Yang terjadi adalah error, karena module http tidak diketahui</p>
 </li>
 </ol>
-<p><img src="media/495787c70f1f1c8542f8162743e4e91c.png" alt=""></p>
+<p><img src="media/033dec303348070b25032bb86c12ed96.png" alt=""></p>
 <ol>
-<li>Memodifikasi app.module.ts dan menghapus cousecomponent</li>
-</ol>
-<p><img src="media/8429eba53975336cd977c57724219ee4.png" alt=""></p>
-<ol>
-<li>Setelah dijalankan terjadi error karena componen app-course tidak dapat
-menemukan modulenya</li>
-</ol>
-<p><img src="media/153ca6137fad6f1d892aa2c390324a5c.png" alt=""></p>
-<p><strong>Praktikum &#x2013; bagian 2 : Templates</strong></p>
-<ol>
-<li>Menambahkan property baru pada file courses.component.ts dengan nama title</li>
-</ol>
-<p><img src="media/e1c79b271fe2e6d034bcd4bbf2d28a5c.png" alt=""></p>
-<ol>
-<li>Lalu menambahkan String Binding pada courses.component.html<pre><code>&lt;p&gt;
-courses works!
-&lt;/p&gt;
-&lt;p&gt;
-Judulnya: undefined
-&lt;/p&gt;
-</code></pre></li>
-<li>Brikut hasil pada browser</li>
-</ol>
-<p><img src="media/cd25ba652cd81f717b24b00e96df3f8f.png" alt=""></p>
-<ol>
-<li>Menambahkan method getTitle() pada courses.component.ts</li>
-</ol>
-<p><img src="media/065db5cbee07ee5a0ecc84c188056a5e.png" alt=""></p>
-<ol>
-<li>Setelah itu juga menambahkan modifikasi pada courses.component.html, dengan
-menambah getTitle</li>
-</ol>
-<p><img src="media/gettitle.png" alt=""></p>
-<ol>
-<li>Dan hasil setelah menjalankan browser</li>
-</ol>
-<p><img src="media/c8be959af704dfa27c00bc23e43c20f9.png" alt=""></p>
-<p><strong>Praktikum &#x2013; Bagian 3: Directive</strong></p>
-<ol>
-<li><p>Menambahkan array pada courses.component.ts</p>
-<pre><code>Courses = [
-{id: 0, name:&apos;HTML&apos;},
-{id: 1, name:&apos;PHP&apos;},
-{id: 2, name:&apos;ANGULAR&apos;},
-{id: 3, name:&apos;C\#&apos;},\
-{id: 4, name: &apos;VB.NET&apos;}
-]
-</code></pre></li>
-<li><p>Lalu menambahkan table pada courses.component.html\</p>
+<li><p>Melengkapi kode program posts.component.ts</p>
+<p><img src="media/46181176adc0734ddef927e2dd4e9409.png" alt=""></p>
+</li>
+<li><p>Hasil dari modifikasi program diatas</p>
+<p><img src="media/d80a8ed10b35f36f2c7075a95a17e54a.png" alt=""></p>
+</li>
+<li><p>Menampilkan data pada browser dengan kode dibawah</p>
+<p><img src="media/5d6df9fbc6c17cb95b2bb498e25314ae.png" alt=""></p>
+</li>
+<li><p>Mengubah kode pada posts.component.ts</p>
+<p><img src="media/607b7d4645ba9a84332cfecfb4462f89.png" alt=""></p>
+</li>
+<li><p>Hasil pada browser</p>
+<p><img src="media/b30f9a82bba013a1c8646a0508c9da63.png" alt=""></p>
 </li>
 </ol>
-<pre><code>&lt;table&gt;
-    &lt;thead&gt;
-        &lt;th&gt;
-        #ID
-        &lt;/th&gt;
-        &lt;th&gt;Course name&lt;/th&gt;
-    &lt;/thead&gt;
-    &lt;tBody&gt;
-        &lt;tr *ngFor=&quot;let Course of Courses&quot;&gt;
-            &lt;td&gt;&lt;/td&gt;
-            &lt;td&gt;&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tBody&gt;
-&lt;/table&gt;
-</code></pre><ol>
-<li>Lalu setelah decompile</li>
-</ol>
-<p><img src="media/2b26f102fb63d1f263fe15ce9464d7b2.png" alt=""></p>
-<p><strong>Praktikum- Bagian 4: Services dan Dependency Injection</strong></p>
+<p><strong>Praktikum &#x2013; Bagian 3: creating data</strong></p>
 <ol>
-<li>Menambahkan method getCourse pada file couses.service.ts</li>
+<li><p>Menambahkan input di elemen pada posts.component.html</p>
+<p><img src="media/637b5f68fc9e97e61e04fab5d0f5ea77.png" alt=""></p>
+</li>
+<li><p>Memodifikasi program pada posts.componen.ts</p>
+<p><img src="media/e620280a7b1f458303bbf32ce6f8e190.png" alt=""></p>
+</li>
+<li><p>Hasil pada browser</p>
+<p><img src="media/33f182cdb409cec5315ef3de4dcf8180.png" alt=""></p>
+</li>
 </ol>
-<pre><code>getCouses(){
-    return [
-        {id: 0, name:&apos;HTML&apos;},
-        {id: 1, name:&apos;PHP&apos;},
-        {id: 2, name:&apos;ANGULAR&apos;},
-        {id: 3, name:&apos;C\#&apos;},
-        {id: 4, name: &apos;VB.NET&apos;}
-];
-</code></pre><ol>
-<li>Lalu melakukan modifikasi pada courses.component.ts</li>
+<p><strong>Praktikum &#x2013; Bagian 4 : Updating Data</strong></p>
+<ol>
+<li>Menambahkan button update</li>
 </ol>
-<pre><code>Courses;
-constructor(private service:CoursesService) {
-    this.Courses=service.getCouses();
-}
-</code></pre><ol>
-<li>Hasil pada browser</li>
+<p><img src="media/8ecacc8da9817fd7602cd8f377762f21.png" alt=""></p>
+<ol>
+<li><p>Menambahkan fungsi posts</p>
+<p><img src="media/ecb7c1f324e78715e4f935f0d2ca1cea.png" alt=""></p>
+</li>
 </ol>
-<p><img src="media/dc0271fe22dd7a14d67b4fdabb66642f.png" alt=""></p>
+<p><strong>Praktikum 5 &#x2013; Deleting Data</strong></p>
+<ol>
+<li><p>Menambahkan button delete</p>
+<p><img src="media/7a2795bb463504420cb18f8c5a26365b.png" alt=""></p>
+</li>
+<li><p>Menambahkan fungsi delete</p>
+</li>
+</ol>
+<p><img src="media/e6650985cb32dd3d884e2c659ff7fdec.png" alt=""></p>
 
                                 
                                 </section>
@@ -370,14 +339,10 @@ constructor(private service:CoursesService) {
 
             
                 
-                <a href="JS2.html" class="navigation navigation-prev " aria-label="Previous page: Jobsheet2">
+                <a href="JS8.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 8_Reactive_form">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="JS4.html" class="navigation navigation-next " aria-label="Next page: Jobsheet4">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -386,7 +351,7 @@ constructor(private service:CoursesService) {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Jobsheet3","level":"1.3","depth":1,"next":{"title":"Jobsheet4","level":"1.4","depth":1,"path":"JS4.md","ref":"JS4.md","articles":[]},"previous":{"title":"Jobsheet2","level":"1.2","depth":1,"path":"JS2.md","ref":"JS2.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"JS3.md","mtime":"2019-03-05T16:51:06.735Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-08T04:41:37.376Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"9.HTTPService","level":"1.8","depth":1,"previous":{"title":"8_Reactive_form","level":"1.7","depth":1,"path":"JS8.md","ref":"JS8.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"JS9.md","mtime":"2019-05-07T15:36:13.882Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-08T04:41:37.376Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

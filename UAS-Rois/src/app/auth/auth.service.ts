@@ -1,33 +1,37 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
-import { BehaviorSubject } from 'rxjs';
-import { User } from './user';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
+import {tokenNotExpired, JwtHelper } from 'angular-jwt';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class AuthService {
-  [x: string]: any;
-  private loggedIn:
-  BehaviorSubject<boolean> = new
-  BehaviorSubject<boolean>(false);
-
-  get isLoggedIn(){
-    return this.loggedIn.asObservable();
+  constructor(private http: Http) {
   }
-  constructor(
-    private router: Router
-  ) {}
 
-  loggin(user: User) {
-    if( user.userName ! == '' && user.password !== '') {
-      this.loggedIn.next(true);
-      this.router.navigate(['/']);
-    }
+  loggin(credentials) {
+    return this.http.post('/api/authenticate',
+      JSON.stringify(credentials)).map(response => {
+        let result = response.json();
+        if (result && result.token) {
+          localStorage.setItem('token', result.token);
+          return true;
+        }
+        return false;
+      });
   }
 
   logout() {
-    this.loggedIn.next(false);
-    this.SVGPathSegCurvetoQuadraticRel.navigate(['/login']);
+    localStorage.removeItem('token');
+  }
+
+  isLoggedIn() {
+    return tokenNotExpired();
+  }
+
+  get currentUser(){
+    let token = localStorage.getItem('token');
+    if (!token) return null;
+
+    return new JwtHelper().decodeToken(token);
   }
 }

@@ -1,0 +1,111 @@
+
+<h3>Add a New Friend</h3>
+<br>
+<div class="container">
+  <div class="col-md-8 offset-md-2">
+    <form #form="ngForm" (ngSubmit)="submit(form.value)">
+      <div class="form-group row">
+        <label for="name" class="col-sm-3 col-form-label">Name : </label>
+        <div class="col-sm-9">
+          <input type="text" 
+          class="form-control" 
+          id="name"
+          maxlength="20"
+          minlength="3"
+          ngModel
+          #friendsName = "ngModel"
+          (change)="log(friendsName)" 
+          name="name"
+          required
+          />
+          <div
+          class="alert alert-danger" *ngIf="friendsName.touched && !friendsName.valid">
+            <div *ngIf="friendsName.errors['required']">Name must be filled</div>
+            <div *ngIf="friendsName.errors['minlength']">Min 3 </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="email"class="col-sm-3 col-form-label">Email:</label>
+        <div class="col-sm-9">
+          <input
+          type="text"
+          id="email"
+          class="form-control"
+          required
+          email
+          ngModel
+          #friendsEmail="ngModel"
+          name="email"
+          />
+          <div class="alert alert-danger" *ngIf="friendsEmail.touched && !friendsEmail.valid">
+            <div *ngIf="friendsEmail.errors['required']">Email must filled</div>
+            <div *ngIf="friendsEmail.errors['email']">Email is invalid</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="contact"class="col-sm-3 col-form-label">Contact No:</label>
+        <div class="col-sm-9">
+          <input
+          type="text"
+          id="contact"
+          class="form-control"
+          required
+          minlength="11"
+          maxlength="13"
+          pattern='[0-9]+'
+          ngModel
+          #contactFriend="ngModel"
+          name="contact"
+          />
+          <div
+            class="alert alert-danger"
+            *ngIf="contactFriend.touched && !contactFriend.valid">
+            <div *ngIf="contactFriend.errors['required']">Nomor Harus Diisi</div>
+            <div *ngIf="contactFriend.errors['minlength']">Nomor Lebih dari 10 Angka</div>
+            <div *ngIf="contactFriend.errors['pattern']">
+              Harus Berupa Angka
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="submit" [disabled]="!form.valid" class="btn btn-success">
+        Add Friends
+      </button>
+    </form>
+  </div>
+</div>
+
+<br>
+<h3 style=text-align:center>My Friends</h3>
+
+<div class="container">
+  <div class="col-md-8 offset-md-2">
+      <input class="form-control" type="text" [(ngModel)]="userFilter.name" placeholder="Type to filter by name" aria-label="Search">
+      <br>
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Contact</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let friend of friends | filterBy: userFilter">
+      <th scope="row">{{friend.id}}</th>
+      <th>{{friend.name}}</th>
+      <th>{{friend.email}}</th>
+      <th>{{friend.contact}}</th>
+    </tr>
+    <h4 *ngIf="(friends).length === 0">
+        No matching elements
+    </h4>
+  </tbody>
+</table>
+</div>
+</div>

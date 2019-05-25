@@ -1,0 +1,39 @@
+<h2 align="center">Contact Me</h2>
+<div class="col-md-6">
+  <form (ngSubmit) = "onSave()">
+    <div class="form-group">
+      <label for="yourName">Your Name : </label>
+      <input type="text" class="form-control" (click)="onNew()" [(ngModel)]="inputModel.yourname" name="yourname">
+    </div>
+    <div class="form-group">
+      <label for="yourEmail">Your Email : </label>
+      <input type="email" 
+      class="form-control" 
+      [(ngModel)]="inputModel.youremail" 
+      name="youremail"/>
+     <!-- <div class="alert alert-danger" *ngIf="emailvalid.errors.email">
+        email invalid
+     </div> -->
+    </div>
+    <div class="form-group">
+        <label for="yourMessage">Your Message : </label>
+        <input 
+        type="text" 
+        name="yourmessage"
+        class="form-control" 
+        [(ngModel)]="inputModel.yourmessage" 
+        id="yourmessage">
+    </div>  
+  
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+<div class="container">
+  <tr *ngFor="let registration of inputData">
+    <h3>{{registration.label}}</h3>
+    <p>{{registration.labelName}} : {{registration.yourname}}</p>
+    <p>{{registration.labelEmail}} : {{registration.youremail}}</p>
+    <p>{{registration.labelMessage}} : {{registration.yourmessage}}</p>
+</tr>
+</div>
+

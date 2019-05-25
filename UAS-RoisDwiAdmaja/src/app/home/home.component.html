@@ -1,0 +1,12 @@
+<div align="center">
+  <h1>{{title}}</h1>
+  <img [src]="ImageUrl" class="img-responsive" width="480">
+</div>
+<div *ngIf="invalidLogin" class="alert alert-danger">Invalid username and/or password</div>
+<form class="form-signin" #f="ngForm" (ngSubmit)="signIn(f.value)">
+    <label for="userName" >Username</label>
+    <input type="text" ngModel class="form-control" id="username" name="username" required autofocus>
+    <label for="Password" >Password</label>
+    <input type="password" ngModel class="form-control" id="password" name="password">
+  <button type="submit" class="btn btn-primary btn-block btn-success">Login</button>
+</form>

@@ -1,0 +1,11 @@
+class contactData {
+    constructor(
+      public label:string='data',
+      public labelName: string='Nama',
+      public labelEmail: string='Email',
+      public labelMessage: string='Message',
+      public yourname:string='',
+      public youremail:string='',
+      public yourmessage:string='',
+    ) {}
+  }
